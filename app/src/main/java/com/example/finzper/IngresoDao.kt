@@ -28,5 +28,12 @@ interface IngresoDao {
     @Insert
     fun addGasto(vararg gasto: Gasto)
 
+    //USER
+
+    @Insert
+    fun addUser(vararg user: User)
+
+    @Query("SELECT * FROM user WHERE correo > :correo and contraseña> :contraseña")
+    fun login(correo: String,contraseña: String): LiveData<List<User>>
 
 }

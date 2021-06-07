@@ -25,5 +25,19 @@ class Gasto (
     val id:Int = 0
 ):Serializable
 
+@Entity(tableName = "user")
+class User (
+    val nombre: String,
+    val apellidos: String,
+    val correo: String,
+    val contraseña: String,
+
+
+
+    @PrimaryKey(autoGenerate = true)
+    val id:Int = 0
+):Serializable
+
+
 
 
